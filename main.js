@@ -100,6 +100,23 @@ eseguiEferma("ciao", 2000, 8000);
 
 //Scrivi una funzione contoAllaRovescia che accetta un numero n e stampa il conto alla rovescia da n a 0, con un intervallo di 1 secondo tra ogni numero. Quando arriva a 0, stampa "Tempo scaduto!" e interrompe il timer.
 
+function contoAllaRovescia(n) {
+  let counter = n;
+
+  const interval = setInterval(() => {
+    if (counter > 0) {
+      console.log(counter);
+
+      counter--;
+    } else {
+      console.log("Tempo scaduto");
+      clearInterval(interval);
+    }
+  }, 1000);
+}
+
+contoAllaRovescia(5);
+
 // Snack 9 (Bonus)
 //Creare una funzione che esegue una sequenza di operazioni con ritardi
 
