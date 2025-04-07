@@ -47,13 +47,20 @@ function creaTimer(tempo) {
 
 const timer1s = creaTimer(1000);
 const timer5s = creaTimer(5000);
-timer5s(); // Stampa "Tempo scaduto!" dopo 1 secondo
+timer5s();
 
 // Snack 5
 //Crea una funzione stampaOgniSecondo con setInterval.
 
 //Definisci una funzione che accetta un messaggio e lo stampa ogni secondo.
 //Nota: Questa funzione creerà un loop infinito. Interrompilo manualmente o usa clearInterval() in un altro script.
+
+function stampaOgniSecondo(message) {
+  setInterval(() => {
+    console.log(message);
+  }, 1000);
+}
+//stampaOgniSecondo("Ciao");
 
 // Snack 6
 //Crea un contatore automatico con setInterval
