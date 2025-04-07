@@ -67,6 +67,19 @@ function stampaOgniSecondo(message) {
 
 //Definisci una funzione creaContatoreAutomatico che accetta un intervallo di tempo e restituisce una funzione che avvia un setInterval, incrementando un contatore e stampandolo.
 
+function creaContatoreAutomatico(tempo) {
+  let counter = 0;
+  return () => {
+    setInterval(() => {
+      counter++;
+      console.log(`${counter}`);
+    }, tempo);
+  };
+}
+
+const contaOgniTot = creaContatoreAutomatico(2000);
+//contaOgniTot();
+
 // Snack 7
 //Crea una funzione che ferma un timer dopo un certo tempo
 
