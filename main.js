@@ -123,6 +123,23 @@ contoAllaRovescia(5);
 //Scrivi una funzione sequenzaOperazioni che accetta un array di operazioni (funzioni) e un tempo di intervallo.
 //Ogni operazione deve essere eseguita in sequenza con un ritardo uguale al tempo di intervallo.
 
+function sequenzaOperazioni(array, interval) {
+  array.forEach((element, index) => {
+    setTimeout(() => {
+      element();
+    }, interval * index);
+  });
+}
+
+sequenzaOperazioni(
+  [
+    () => console.log("uno"),
+    () => console.log("due"),
+    () => console.log("tre"),
+  ],
+  1000
+);
+
 //Snack 10 (Bonus)
 //Creare un throttler per limitare l’esecuzione di una funzione
 
