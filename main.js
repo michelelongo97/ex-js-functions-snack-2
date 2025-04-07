@@ -85,6 +85,16 @@ const contaOgniTot = creaContatoreAutomatico(2000);
 
 //Scrivi una funzione eseguiEferma che accetta un messaggio, un tempo di avvio e un tempo di stop. Il messaggio deve essere stampato a intervalli regolari, ma si deve fermare dopo il tempo di stop.
 
+function eseguiEferma(messaggio, avvio, stop) {
+  const interval = setInterval(() => {
+    console.log(`Il messaggio è ${messaggio}`);
+  }, avvio);
+
+  setTimeout(() => {
+    clearInterval(interval);
+  }, stop);
+}
+eseguiEferma("ciao", 2000, 8000);
 // Snack 8 (Bonus)
 //Crea una funzione che simula un conto alla rovescia
 
