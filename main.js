@@ -6,16 +6,15 @@
 //Quindi, riscrivi la funzione somma con la sintassi delle arrow functions.
 
 function somma(num1, num2) {
-  return num1 + num2;
+  return console.log(num1 + num2);
 }
-somma(1, 2);
-
-const somma = function (num1, num2) {
-  return num1 + num2;
-};
 somma(2, 3);
 
-const somma = (num1, num2) => num1 + num2;
+const somma1 = function (num1, num2) {
+  return num1 + num2;
+};
+
+const somma2 = (num1, num2) => num1 + num2;
 
 // Snack 2
 //Crea una arrow function che calcola il quadrato di un numero.
@@ -37,6 +36,18 @@ const eseguiOperazione = (num1, num2, operatore) => {
 //Crea un generatore di funzioni creaTimer
 
 //Scrivi una funzione creaTimer che accetta un tempo (in ms) e restituisce una nuova funzione che avvia un setTimeout per stampare "Tempo scaduto!".
+
+function creaTimer(tempo) {
+  return () => {
+    setTimeout(() => {
+      console.log("Tempo scaduto!");
+    }, tempo);
+  };
+}
+
+const timer1s = creaTimer(1000);
+const timer5s = creaTimer(5000);
+timer5s(); // Stampa "Tempo scaduto!" dopo 1 secondo
 
 // Snack 5
 //Crea una funzione stampaOgniSecondo con setInterval.
